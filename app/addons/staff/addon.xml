@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<addon scheme="3.0">
+    <id>staff</id>
+    <version>1.0</version>
+    <name>Staff</name>
+    <status>active</status>
+    <default_language>en</default_language>
+    <queries>
+        <item>DROP TABLE IF EXISTS ?:staff;</item>
+        <item>DROP TABLE IF EXISTS ?:staff_descriptions;</item>
+        <item>
+            CREATE TABLE `?:staff` (
+                `person_id` int(11) unsigned NOT NULL auto_increment,
+                `email` varchar(255) NOT NULL  default '',
+                `gender` varchar(1) NOT NULL  default '',
+                `country` varchar(2) NOT NULL  default '',
+                `state` varchar(32) default '',
+                `city` varchar(255) default '',
+                PRIMARY KEY  (`person_id`),
+            ) Engine=MyISAM DEFAULT CHARSET UTF8;
+        </item>
+        <item>
+            CREATE TABLE `?:staff_descriptions` (
+                `person_id` int(11) unsigned NOT NULL default 0,
+                `name` varchar(128) NOT NULL default '',
+                `post` varchar(128) NOT NULL default '',
+                `description` text,
+                `lang_code` char(2) NOT NULL default 'EN',
+            ) Engine=MyISAM DEFAULT CHARSET UTF8;
+        </item>
+    </queries>
+
+</addon>
