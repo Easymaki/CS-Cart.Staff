@@ -16,6 +16,7 @@
                 `country` varchar(2) NOT NULL  default '',
                 `state` varchar(32) default '',
                 `city` varchar(255) default '',
+                `adress` varchar(255) default '',
                 PRIMARY KEY  (`person_id`),
             ) Engine=MyISAM DEFAULT CHARSET UTF8;
         </item>
