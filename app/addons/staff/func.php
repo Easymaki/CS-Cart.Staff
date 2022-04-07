@@ -2,7 +2,6 @@
 
 use Tygh\Registry;
 use Tygh\Languages\Languages;
-use Tygh\Template\Mail\Service;
 
 function fn_staff_get_staff($lang_code = CART_LANGUAGE, $params = array())
 {
