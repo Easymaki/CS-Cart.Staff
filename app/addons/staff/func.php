@@ -50,7 +50,7 @@ function fn_staff_get_staff($lang_code = CART_LANGUAGE, $params = array())
 
     if (AREA == 'C') {
         foreach ($staff as $key => $value) {
-            $staff[$key]['image'] = fn_get_image_pairs($value['person_id'], 'staff', 'M', true, false, $lang_code);
+            $key['image'] = fn_get_image_pairs($value['person_id'], 'staff', 'M', true, false, $lang_code);
         }
     }
 
