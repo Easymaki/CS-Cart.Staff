@@ -96,7 +96,7 @@ function fn_staff_update_person(&$person, &$person_id, $lang_code = DESCR_SL)
     return $person_id;
 }
 
-function fn_staff_delete_person_by_id(&$person_id)
+function fn_staff_delete_person_by_id($person_id)
 {
     if (!empty($person_id)) {
         db_query("DELETE FROM ?:staff WHERE person_id = ?i", $person_id);
